@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "title": "Fruits",
+            "items": [
+                "Apple",
+                "Strawberry",
+                "Pear",
+                "Orange"
+            ]
+        },
+        {
+            "title": "Cars",
+            "items": [
+                "BMW",
+                "Benz",
+                "Honda",
+                "Kia"
+            ]
+        },
+        {
+            "title": "States",
+            "items": [
+                "Pennsylvania",
+                "North Carolina",
+                "California",
+                "Alaska"
+            ]
+        },
+        {
+            "title": "Colors",
+            "items": [
+                "Orange",
+                "Blue",
+                "Purple",
+                "Black"
+            ]
+        },
+        {
+            "title": "Names",
+            "items": [
+                "Jesse",
+                "Dean",
+                "Nancy",
+                "Myles"
+            ]
+        }
+    ]
+}
