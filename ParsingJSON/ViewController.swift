@@ -7,75 +7,47 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
-    var result: Result?
+    @IBOutlet var refreshBtn: UIButton!
     
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
-
+    let url = "https://briors.com/test.php"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        parseJSON()
-        view.addSubview(tableView)
-        tableView.frame = view.bounds
-        tableView.delegate = self
-        tableView.dataSource = self
+        getData(from: url)
     }
     
-    // TableView
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return result?.data.count ?? 0
+    @IBAction func btnTapped(_ sender: UIButton) {
+        getData(from: url)
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return result?.data[section].title
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let result = result {
-            return result.data[section].items.count
-        } else {
-            return 0
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let text = result?.data[indexPath.section].items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = text
+    private func getData(from url: String) {
+        var result: Result?
         
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    // JSON
-
-    private func parseJSON() {
-        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {
-            return
-        }
-        let url = URL(fileURLWithPath: path)
+        let url = URL(string: url)!
         
         do {
             let jsonData = try Data(contentsOf: url)
             result = try JSONDecoder().decode(Result.self, from: jsonData)
-            
-            if let result = result {
-                print(result)
-            } else {
-                print("Failed to parse.")
-            }
         }
         catch {
-            print("Error: \(error)")
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        guard let json = result else {
+            return
+        }
+        
+        let j = json.data
+        
+        var index = 0
+        for i in j {
+            print(i.title)
+            for i in j[index].items {
+                print("- \(i)")
+            }
+            index += 1
         }
     }
 }

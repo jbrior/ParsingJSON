@@ -13,8 +13,7 @@
 		A24C78DE273899BE00A34C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24C78DC273899BE00A34C70 /* Main.storyboard */; };
 		A24C78E0273899C200A34C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24C78DF273899C200A34C70 /* Assets.xcassets */; };
 		A24C78E3273899C200A34C70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24C78E1273899C200A34C70 /* LaunchScreen.storyboard */; };
-		A24C78EB273899FD00A34C70 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A24C78EA273899FC00A34C70 /* data.json */; };
-		A24C78ED27389EDE00A34C70 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C78EC27389EDE00A34C70 /* Models.swift */; };
+		A2B9858A273A258700C7D2FF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98589273A258700C7D2FF /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +25,7 @@
 		A24C78DF273899C200A34C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24C78E2273899C200A34C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A24C78E4273899C200A34C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A24C78EA273899FC00A34C70 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		A24C78EC27389EDE00A34C70 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A2B98589273A258700C7D2FF /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +65,7 @@
 				A24C78DF273899C200A34C70 /* Assets.xcassets */,
 				A24C78E1273899C200A34C70 /* LaunchScreen.storyboard */,
 				A24C78E4273899C200A34C70 /* Info.plist */,
-				A24C78EA273899FC00A34C70 /* data.json */,
-				A24C78EC27389EDE00A34C70 /* Models.swift */,
+				A2B98589273A258700C7D2FF /* Models.swift */,
 			);
 			path = ParsingJSON;
 			sourceTree = "<group>";
@@ -134,7 +131,6 @@
 				A24C78E3273899C200A34C70 /* LaunchScreen.storyboard in Resources */,
 				A24C78E0273899C200A34C70 /* Assets.xcassets in Resources */,
 				A24C78DE273899BE00A34C70 /* Main.storyboard in Resources */,
-				A24C78EB273899FD00A34C70 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +144,7 @@
 				A24C78DB273899BE00A34C70 /* ViewController.swift in Sources */,
 				A24C78D7273899BE00A34C70 /* AppDelegate.swift in Sources */,
 				A24C78D9273899BE00A34C70 /* SceneDelegate.swift in Sources */,
-				A24C78ED27389EDE00A34C70 /* Models.swift in Sources */,
+				A2B9858A273A258700C7D2FF /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
